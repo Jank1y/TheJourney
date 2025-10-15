@@ -26,7 +26,16 @@ nav .logo img {
 }
 
 nav .text {
+  display: flex;
   margin-left: 1%;
+  overflow: auto;
+  animation: spin 5s infinite linear;
+}
+.text ::-webkit-scrollbar {
+  display: none;
+}
+nav .text h1 {
+  flex: 0 0 5em;
 }
 
 .main {
@@ -55,4 +64,8 @@ input[type="button"] {
   border: 1px solid #888;
   border-radius: 3px;
   cursor: pointer;
+}
+@keyframes spin {
+  from {translate: 0}
+  to {translate: -100%;}
 }
